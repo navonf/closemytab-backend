@@ -18,6 +18,7 @@
   "homepage": "https://github.com/navonf/closemytab#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "es6-promise": "^4.2.5",
     "express": "^4.16.4",
     "express-sanitizer": "^1.0.4",

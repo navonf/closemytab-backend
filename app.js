@@ -1,8 +1,9 @@
 /*         Packages.      */
 const express          = require('express'),
-    app              = express(),
-    bodyParser       = require('body-parser'),
-    expressSanitizer = require('express-sanitizer');
+      app              = express(),
+      cors             = require('cors'),
+      bodyParser       = require('body-parser'),
+      expressSanitizer = require('express-sanitizer');
 
 /*         Port.          */
 const PORT             = process.env.PORT || 3000;
@@ -11,6 +12,7 @@ const PORT             = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : false}));
 app.use(expressSanitizer());
+app.use(cors());
 
 /*         Routes.        */
 require('./routes')(app);
