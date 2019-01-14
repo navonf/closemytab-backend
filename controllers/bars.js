@@ -16,7 +16,7 @@ module.exports = {
   getNearest(req, res) {
     const query = req.query;
 
-    fetch(`https://api.yelp.com/v3/businesses/search?latitude=${query.lat}&longitude=${query.lng}&term=bars`, options)
+    fetch(`https://api.yelp.com/v3/businesses/search?latitude=${query.lat}&longitude=${query.lng}&term=bars&limit=50`, options, params)
       .then((data) => data.json())
       .then((data) => {
 
